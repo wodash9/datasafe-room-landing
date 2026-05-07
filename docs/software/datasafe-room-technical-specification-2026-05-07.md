@@ -8,6 +8,7 @@ reviewed_by:
   - Daedalus Backend Architect
   - Aegis Infra-Security Architect
   - Mimir Technical Diagrams + UX Flow
+  - DSP Standards Research
 ---
 
 # DataSafe Room — Especificación técnica de componentes
@@ -33,7 +34,8 @@ Principio de alcance:
 
 - **MVP:** controlled export first con CSV/XLSX/PDF/ZIP subidos manualmente, clasificación, permisos, aprobación, audit log y audit pack.
 - **V1:** SSO/MFA, watermarking, antimalware, DLP básico, hash chain/WORM lógico, SIEM/webhooks, API scoped tokens.
-- **V2:** EDC/DSP, catálogo federado, ODRL/DCAT formal y conectores ERP/MES/PLM solo si el mercado lo justifica.
+- **MVP/P1 interop:** `DSP-ready by design`: IDs estables, snapshots JSON-LD DCAT/ODRL, `/.well-known/dspace-version` detrás de feature flag y export pack con carpeta `dataspace/`.
+- **V2:** fachada DSP HTTPS interoperable y/o EDC Connector solo tras validar demanda; catálogo federado, DID/VC y conectores ERP/MES/PLM quedan fuera del MVP.
 
 ## 1. Diagramas principales
 
@@ -84,6 +86,12 @@ Decisión: zona pública mínima, app privada, datos protegidos, KMS/secrets y S
 ![Roadmap](datasafe-room-diagrams-assets/08-roadmap-mvp-v1-v2.svg)
 
 Decisión: no saltar a federación hasta validar demanda repetida, contratos claros y threat model.
+
+### 1.9 Alineación con IDSA Dataspace Protocol
+
+![Alineación DSP](datasafe-room-diagrams-assets/09-dsp-protocol-alignment.svg)
+
+Decisión: implementar el estándar como **fachada interoperable y proyecciones canónicas**, no como federación remota completa en el MVP.
 
 ## 2. Bounded contexts y módulos backend
 
@@ -1296,6 +1304,8 @@ GET    /rooms/{room_id}/retention-status
 - Approval mock.
 - Audit pack demo.
 - Diagramas y documentación.
+- IDs estables tipo URI/URN para organizaciones, data products, policies y exports.
+- Snapshots sintéticos DCAT/ODRL generables desde datos demo.
 
 ### P1 — MVP piloto real controlado
 
@@ -1310,6 +1320,9 @@ GET    /rooms/{room_id}/retention-status
 - Audit events funcionales.
 - Retention/revocation básica.
 - Tests API/security mínimos.
+- `Dataspace Interoperability Adapter` interno.
+- `/.well-known/dspace-version` detrás de feature flag.
+- Export pack con `dataspace/dcat_dataset.jsonld`, `dataspace/odrl_policy.jsonld`, `dataspace/contract_agreement.jsonld` y `dataspace/transfer_process.jsonld`.
 
 ### P2 — V1 hardening
 
@@ -1322,13 +1335,15 @@ GET    /rooms/{room_id}/retention-status
 - API scoped tokens.
 - Backup/restore automatizado.
 - Audit pack robusto.
+- Validación JSON Schema de mensajes DSP 2024-1 para endpoints privados.
+- Façade DSP HTTPS privada para piloto con allowlist: catalog, negotiation y transfer provider-side.
 
-### P3 — Dataspace-ready
+### P3 — Dataspace-ready / federación
 
-- DCAT/ODRL formal.
-- EDC/DSP opcional.
+- DCAT/ODRL formal y probado contra conectores externos.
+- EDC Connector u otro connector compatible solo si un cliente/dataspace lo exige.
 - Catálogo federado.
-- Verifiable credentials.
+- Verifiable credentials / trust framework del dataspace objetivo.
 - Conectores ERP/MES/PLM read-only aprobados.
 - OpenLineage.
 - Compute-to-data real.
@@ -1347,6 +1362,7 @@ DataSafe Room MVP está técnicamente aceptado cuando:
 8. La revocación corta accesos futuros.
 9. Un usuario de otra organización no puede acceder a datos no autorizados.
 10. No existe conexión directa a OT/ERP/MES/SCADA.
+11. En modo interop, todo export pack incluye manifest + checksums + snapshots JSON-LD DCAT/ODRL/DSP sin URLs internas ni secretos.
 
 ## 18. Decisiones abiertas
 
@@ -1355,7 +1371,8 @@ DataSafe Room MVP está técnicamente aceptado cuando:
 - **Queue:** Redis/RQ/Celery/Arq o tabla `jobs` inicial.
 - **Hosting:** Coolify actual para demo; cloud/VPC privada para piloto real sensible.
 - **Formato export:** ZIP con CSV/PDF/JSON desde MVP o empezar solo PDF/audit pack.
-- **Policy engine:** código propio simple en MVP; OPA/Cedar/ODRL en V1/V2.
+- **Policy engine:** código propio simple en MVP con proyección ODRL limitada; OPA/Cedar/ODRL formal en V1/V2.
+- **DSP target version:** fijar `2024-1` para la primera compatibilidad, revisar Eclipse Dataspace Protocol antes de piloto externo.
 
 ## 19. Próxima acción técnica recomendada
 
@@ -1370,7 +1387,214 @@ Crear una **demo técnica PCF local-first** dentro de un repo/app separada o ram
 
 No construir conectores ni federación hasta que el flujo controlado sea entendible, probado y vendible.
 
-## 20. Fuentes internas usadas
+## 20. Alineación obligatoria con IDSA Dataspace Protocol
+
+Ventura ha fijado que DataSafe Room debe contemplar el estándar de IDSA/Eclipse **Dataspace Protocol**. La decisión correcta no es abandonar el MVP controlado, sino diseñarlo desde ahora para que sus conceptos internos puedan exponerse de forma interoperable.
+
+### 20.1 Versión objetivo y alcance
+
+- **Versión objetivo inicial:** Dataspace Protocol `2024-1`, considerada estable/release candidate por IDSA.
+- **Uso en MVP:** `DSP-ready by design`, no certificación ni conformidad formal.
+- **Uso en piloto externo:** activar endpoints DSP HTTPS provider-side detrás de feature flag, allowlist y revisión de seguridad.
+- **Uso en V2:** interoperabilidad real con conectores externos/EDC si existe cliente, dataspace concreto o requirement contractual.
+
+Lenguaje comercial permitido:
+
+- “Arquitectura alineada con IDSA Dataspace Protocol”.
+- “Preparada para exponer catálogos DCAT, políticas ODRL y flujos DSP”.
+- “Interoperabilidad DSP planificada/activable”.
+
+Lenguaje prohibido hasta validarlo:
+
+- “Certificado IDSA/Gaia-X”.
+- “Conforme al estándar” sin pasar test/conformance kit aplicable.
+- “Dataspace federado completo”.
+- “Cumplimiento legal/regulatorio automático”.
+
+### 20.2 Módulos DSP que DataSafe Room debe mapear
+
+| DSP / IDSA | DataSafe Room | MVP/P1 | V2 |
+|---|---|---:|---:|
+| Version metadata | `DspaceVersionController` + `/.well-known/dspace-version` | Sí, feature flag | Público por dataspace |
+| Catalog Protocol | `DcatCatalogProjectionService` | Snapshots/export pack | Endpoint `/catalog/request` |
+| DCAT Dataset/Distribution | `DataProduct`, `DataProductVersion`, `Asset` | Sí, JSON-LD snapshot | Catálogo remoto |
+| ODRL Policy/Offer | `Policy`, `Agreement`, `ExportContract` | Subset limitado | ODRL formal/perfil |
+| Contract Negotiation | `OutputRequest` + approval workflow | Shadow model auditado | Endpoint `/negotiations/...` |
+| Transfer Process | Export/download aprobado | Shadow model auditado | Endpoint `/transfers/...` |
+| Identity Provider / claims | Keycloak/OIDC + future DID/VC | OIDC | Trust framework objetivo |
+| Connector | Interop Adapter/Façade | Interno | EDC u otro connector |
+
+### 20.3 Endpoints DSP mínimos planificados
+
+Common:
+
+```http
+GET /.well-known/dspace-version
+```
+
+Provider-side catalog:
+
+```http
+POST /api/dsp/2024-1/catalog/request
+GET  /api/dsp/2024-1/catalog/datasets/{id}
+```
+
+Provider-side contract negotiation:
+
+```http
+GET  /api/dsp/2024-1/negotiations/{providerPid}
+POST /api/dsp/2024-1/negotiations/request
+POST /api/dsp/2024-1/negotiations/{providerPid}/request
+POST /api/dsp/2024-1/negotiations/{providerPid}/events
+POST /api/dsp/2024-1/negotiations/{providerPid}/agreement/verification
+POST /api/dsp/2024-1/negotiations/{providerPid}/termination
+```
+
+Provider-side transfer:
+
+```http
+GET  /api/dsp/2024-1/transfers/{providerPid}
+POST /api/dsp/2024-1/transfers/request
+POST /api/dsp/2024-1/transfers/{providerPid}/start
+POST /api/dsp/2024-1/transfers/{providerPid}/completion
+POST /api/dsp/2024-1/transfers/{providerPid}/termination
+POST /api/dsp/2024-1/transfers/{providerPid}/suspension
+```
+
+Consumer/callback endpoints quedan fuera del MVP salvo que un piloto lo exija.
+
+### 20.4 Entidades y campos nuevos recomendados
+
+Añadir sin crear un modelo federado paralelo:
+
+- `organizations`: `dataspace_participant_id`, `did_web`, `legal_registration_number`, `interop_metadata`.
+- `rooms`: `catalog_visibility`, `interop_enabled`, `interop_base_url`.
+- `data_products`: `dcat_dataset_id`, `dcat_keywords`, `dcat_theme`, `rights_summary`, `license_url`, `contact_point`.
+- `data_product_versions`: `dcat_version_iri`, `dcat_jsonld_snapshot`, `schema_distribution_jsonld`, `dsp_asset_id`.
+- `assets`: `dcat_distribution_id`, `media_type`, `conforms_to`, `access_service`, `access_url_public=false` por defecto.
+- `policies`: `odrl_policy_id`, `odrl_profile`, `odrl_jsonld_snapshot`, `odrl_supported_actions`.
+- `agreements`: `odrl_agreement_id`, `contract_agreement_id`, `odrl_agreement_jsonld_snapshot`, `dsp_negotiation_id`.
+- `output_requests`: `dsp_negotiation_id`, `dsp_negotiation_role`, `dsp_negotiation_state`, `counterparty_participant_id`, `contract_offer_snapshot`.
+- `export_contracts`: `dsp_transfer_process_id`, `transfer_state`, `data_address_snapshot`, `transfer_started_at`, `transfer_completed_at`.
+
+Tabla adicional ligera:
+
+```text
+interop_publications(
+  id uuid pk,
+  room_id uuid not null,
+  source_type text not null,
+  source_id uuid not null,
+  publication_type enum(dcat_catalog,dcat_dataset,odrl_policy,odrl_agreement,dsp_negotiation,dsp_transfer),
+  protocol_version text not null default '2024-1',
+  jsonld_snapshot jsonb not null,
+  checksum_sha256 text not null,
+  status enum(draft,published,revoked,error),
+  created_by uuid,
+  created_at timestamptz,
+  revoked_at timestamptz null
+)
+```
+
+### 20.5 Estados a persistir
+
+Contract Negotiation shadow states:
+
+- `REQUESTED`
+- `OFFERED`
+- `ACCEPTED`
+- `AGREED`
+- `VERIFIED`
+- `FINALIZED`
+- `TERMINATED`
+
+Transfer Process shadow states:
+
+- `REQUESTED`
+- `STARTED`
+- `SUSPENDED`
+- `COMPLETED`
+- `TERMINATED`
+
+Regla: no permitir transiciones desde estados terminales y auditar cada mensaje/estado en `audit_events` o `dsp_message_log`.
+
+### 20.6 Export pack DSP-ready
+
+Todo export aprobado debe poder incluir:
+
+```text
+dataspace/
+├── dcat_dataset.jsonld
+├── odrl_policy.jsonld
+├── contract_agreement.jsonld
+└── transfer_process.jsonld
+```
+
+El `manifest.json` debe incluir bloque `interop`:
+
+```json
+{
+  "interop": {
+    "dataspace_protocol_version": "2024-1",
+    "dataset_id": "urn:datasafe:dataset:...",
+    "contract_agreement_id": "urn:datasafe:agreement:...",
+    "transfer_process_id": "urn:datasafe:transfer:...",
+    "jsonld_files": [
+      "dataspace/dcat_dataset.jsonld",
+      "dataspace/odrl_policy.jsonld",
+      "dataspace/contract_agreement.jsonld",
+      "dataspace/transfer_process.jsonld"
+    ]
+  }
+}
+```
+
+Nunca incluir en DCAT/DSP:
+
+- URLs internas de MinIO/S3.
+- Secrets, tokens permanentes o connection strings.
+- Datos crudos no aprobados.
+- PII innecesaria.
+- Campos clasificados como no exportables.
+
+### 20.7 Seguridad e identidad
+
+- HTTPS obligatorio para cualquier endpoint DSP real.
+- `Authorization` obligatorio salvo `/.well-known/dspace-version`.
+- Catálogo filtrado por identidad, organización, sala, policy y agreement.
+- `404` para recursos inexistentes o no autorizados cuando el binding lo requiera, para evitar enumeración.
+- Tokens temporales para transferencias pull; revocables y auditados.
+- DID/VC/IATP queda como decisión V2 según dataspace objetivo; no bloquear MVP por ello.
+
+### 20.8 Qué NO cubre Dataspace Protocol
+
+DSP no define:
+
+- El protocolo real de transferencia de datos ni el data plane concreto.
+- Cómo implementar storage, workers, colas, sandboxing o UI.
+- Enforcement técnico posterior al consumo por terceros.
+- Un mecanismo único de identidad/trust framework.
+- Compliance legal, certificación, onboarding o governance.
+- Vocabularios sectoriales específicos de PCF/industrial.
+
+Por tanto, DataSafe Room debe mantener sus controles propios: policy engine, aprobación humana, audit trail, output guard, export manifest, revocación y QA gates.
+
+### 20.9 Criterio de aceptación DSP-ready
+
+El producto puede considerarse `DSP-ready` cuando:
+
+1. `/.well-known/dspace-version` devuelve versión y base path configurables.
+2. Todo `DataProductVersion` aprobado genera snapshot DCAT JSON-LD válido.
+3. Toda `Policy` exportable genera ODRL Offer/Policy snapshot limitado.
+4. Todo `Agreement/ExportContract` genera ODRL Agreement snapshot.
+5. Todo export aprobado genera Transfer Process snapshot.
+6. El export pack contiene carpeta `dataspace/` con JSON-LD y checksums.
+7. No se filtran URLs internas, secretos ni datos no aprobados.
+8. Las transiciones negotiation/transfer quedan auditadas.
+9. Los endpoints DSP reales solo se activan por feature flag + allowlist.
+10. La comunicación externa se prueba contra schemas DSP 2024-1 antes de piloto.
+
+## 21. Fuentes internas y estándares usados
 
 - `docs/datasafe-room-dataspace-characteristics-2026-05-07.md`.
 - `docs/product-strategy-backlog.md`.
@@ -1379,3 +1603,7 @@ No construir conectores ni federación hasta que el flujo controlado sea entendi
 - Revisión delegada Daedalus/Backend Architect.
 - Revisión delegada Aegis/Infra-Security Architect.
 - Revisión delegada Mimir/Technical Diagrams + UX Flow.
+- Revisión delegada DSP Standards Research.
+- IDSA Dataspace Protocol overview: https://internationaldataspaces.org/offers/dataspace-protocol/
+- IDSA Dataspace Protocol 2024-1 repository: https://github.com/International-Data-Spaces-Association/ids-specification
+- Eclipse Dataspace Protocol repository: https://github.com/eclipse-dataspace-protocol-base/DataspaceProtocol

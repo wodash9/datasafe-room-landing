@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="760" viewBox="0 0 1320 760" role="img" aria-labelledby="title desc">
+  <title id="title">DataSafe Room alignment with IDSA Dataspace Protocol</title>
+  <desc id="desc">Diagram showing an external dataspace participant using the DSP HTTPS facade, catalog, contract negotiation and transfer process mapped to DataSafe Room core, policy engine, export worker and audit pack.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#8cc8ff"/></marker>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#101827"/></linearGradient>
+    <style>
+      .title{font:700 30px Inter,Arial,sans-serif;fill:#f8fafc}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#b6c2d1}.box{fill:#111b2e;stroke:#3b82f6;stroke-width:2;rx:18}.box2{fill:#13251d;stroke:#22c55e;stroke-width:2;rx:18}.box3{fill:#2a1b12;stroke:#f59e0b;stroke-width:2;rx:18}.box4{fill:#241527;stroke:#c084fc;stroke-width:2;rx:18}.label{font:700 16px Inter,Arial,sans-serif;fill:#f8fafc}.small{font:400 13px Inter,Arial,sans-serif;fill:#cbd5e1}.edge{stroke:#8cc8ff;stroke-width:2.2;fill:none;marker-end:url(#arrow)}.muted{stroke:#475569;stroke-width:1.5;stroke-dasharray:6 6;fill:none;marker-end:url(#arrow)}.pill{fill:#172033;stroke:#64748b;stroke-width:1;rx:14}.pillText{font:600 12px Inter,Arial,sans-serif;fill:#dbeafe}
+    </style>
+  </defs>
+  <rect width="1320" height="760" fill="url(#bg)"/>
+  <text x="52" y="56" class="title">DataSafe Room — IDSA Dataspace Protocol alignment</text>
+  <text x="52" y="84" class="subtitle">DSP como fachada interoperable: DCAT Catalog, ODRL Contract Negotiation y Transfer Process, sin federación completa en MVP.</text>
+
+  <rect x="54" y="150" width="230" height="112" class="box"/>
+  <text x="78" y="188" class="label">External Participant</text>
+  <text x="78" y="214" class="small">Connector / consumer</text>
+  <text x="78" y="238" class="small">HTTPS + Authorization</text>
+
+  <rect x="354" y="112" width="245" height="96" class="pill"/>
+  <text x="382" y="150" class="label">/.well-known</text>
+  <text x="382" y="176" class="small">dspace-version discovery</text>
+
+  <rect x="354" y="250" width="245" height="120" class="box"/>
+  <text x="382" y="292" class="label">DSP HTTPS Facade</text>
+  <text x="382" y="319" class="small">/api/dsp/2024-1</text>
+  <text x="382" y="344" class="small">Feature-flagged / allowlist</text>
+
+  <rect x="674" y="96" width="240" height="104" class="box2"/>
+  <text x="700" y="135" class="label">Catalog Protocol</text>
+  <text x="700" y="161" class="small">DCAT Catalog / Dataset</text>
+  <text x="700" y="184" class="small">Filtered by policy</text>
+
+  <rect x="674" y="258" width="240" height="116" class="box3"/>
+  <text x="700" y="298" class="label">Contract Negotiation</text>
+  <text x="700" y="325" class="small">ODRL Offer / Agreement</text>
+  <text x="700" y="350" class="small">OutputRequest shadow state</text>
+
+  <rect x="674" y="438" width="240" height="116" class="box4"/>
+  <text x="700" y="478" class="label">Transfer Process</text>
+  <text x="700" y="505" class="small">Pull export package</text>
+  <text x="700" y="530" class="small">Started / Completed / Revoked</text>
+
+  <rect x="996" y="96" width="250" height="112" class="box"/>
+  <text x="1024" y="136" class="label">DataSafe Core</text>
+  <text x="1024" y="163" class="small">Rooms, Data Products,</text>
+  <text x="1024" y="187" class="small">Policies, Agreements</text>
+
+  <rect x="996" y="258" width="250" height="112" class="box3"/>
+  <text x="1024" y="298" class="label">Approval Workflow</text>
+  <text x="1024" y="325" class="small">Human approval required</text>
+  <text x="1024" y="349" class="small">Policy Engine gate</text>
+
+  <rect x="996" y="438" width="250" height="116" class="box4"/>
+  <text x="1024" y="478" class="label">Export Worker</text>
+  <text x="1024" y="505" class="small">ZIP/PDF/CSV + manifest</text>
+  <text x="1024" y="530" class="small">Temporary access token</text>
+
+  <rect x="674" y="612" width="572" height="84" class="box2"/>
+  <text x="704" y="646" class="label">Audit / Export Pack</text>
+  <text x="704" y="672" class="small">manifest.json + checksums + dataspace/dcat_dataset.jsonld + odrl_policy.jsonld + contract_agreement.jsonld + transfer_process.jsonld</text>
+
+  <path d="M284 196 C315 170 326 160 354 160" class="edge"/>
+  <path d="M284 224 C316 260 326 294 354 310" class="edge"/>
+  <path d="M599 310 C626 220 641 155 674 148" class="edge"/>
+  <path d="M599 310 C628 312 644 314 674 316" class="edge"/>
+  <path d="M599 310 C630 390 644 478 674 496" class="edge"/>
+  <path d="M914 148 C948 148 964 150 996 152" class="edge"/>
+  <path d="M914 316 C950 316 964 316 996 316" class="edge"/>
+  <path d="M914 496 C950 496 964 496 996 496" class="edge"/>
+  <path d="M1121 554 C1121 598 1040 610 960 612" class="edge"/>
+  <path d="M794 554 C794 588 820 604 858 612" class="edge"/>
+  <path d="M1121 370 C1121 400 1121 414 1121 438" class="edge"/>
+  <path d="M1121 208 C1121 232 1121 244 1121 258" class="muted"/>
+
+  <rect x="54" y="620" width="500" height="76" class="pill"/>
+  <text x="78" y="650" class="pillText">MVP rule</text>
+  <text x="78" y="674" class="small">DSP-ready by design: snapshots JSON-LD and export pack first; remote federation only after validation.</text>
+</svg>

@@ -1,0 +1,23 @@
+flowchart LR
+    ext[External Dataspace Participant / Connector] -->|HTTPS + Authorization| dsp[DSP HTTPS Facade
+/api/dsp/2024-1]
+    ext -->|GET| wellknown[/.well-known/dspace-version]
+    dsp --> catalog[Catalog Protocol
+DCAT Catalog/Dataset]
+    dsp --> negotiation[Contract Negotiation
+ODRL Offer/Agreement]
+    dsp --> transfer[Transfer Process
+Controlled Export Pull]
+    catalog --> core[DataSafe Room Core
+Rooms + Data Products + Policies]
+    negotiation --> approval[Approval Workflow
+Output Request]
+    transfer --> export[Export Worker
+ZIP/PDF/CSV + Manifest]
+    export --> pack[Audit / Export Pack
+dataspace/*.jsonld]
+    core --> policy[Policy Engine]
+    approval --> policy
+    transfer --> policy
+    pack --> audit[Audit Log
+Message + State Trace]
