@@ -1,0 +1,58 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "id": "vite_config_ts",
+      "community": 1,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "vite-env.d.ts",
+      "file_type": "code",
+      "source_file": "src/vite-env.d.ts",
+      "source_location": "L1",
+      "id": "src_vite_env_d_ts",
+      "community": 2,
+      "norm_label": "vite-env.d.ts"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": "L1",
+      "id": "src_main_tsx",
+      "community": 0,
+      "norm_label": "main.tsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": "L103",
+      "id": "main_app",
+      "community": 0,
+      "norm_label": "app()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_src": "src_main_tsx",
+      "_tgt": "main_app",
+      "source": "src_main_tsx",
+      "target": "main_app",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

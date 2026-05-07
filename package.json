@@ -1,0 +1,25 @@
+{
+  "name": "datasafe-room-landing",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Landing page for DataSafe Room: controlled industrial data collaboration rooms.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "build:web": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "6.0.1",
+    "vite": "8.0.11",
+    "typescript": "6.0.3",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
+  }
+}
