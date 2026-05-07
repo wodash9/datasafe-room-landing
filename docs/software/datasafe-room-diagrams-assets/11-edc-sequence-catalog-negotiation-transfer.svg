@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+<title id="title">EDC flow — catálogo, negociación y transferencia</title><desc id="desc">El consumidor externo negocia vía DSP; DataSafe autoriza y entrega solo un export pack aprobado.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker><style>.t{font:700 30px Inter,Arial,sans-serif;fill:#f8fafc}.s{font:400 15px Inter,Arial,sans-serif;fill:#cbd5e1}.l{font:700 16px Inter,Arial,sans-serif;fill:#f8fafc}.m{font:400 12px Inter,Arial,sans-serif;fill:#cbd5e1}.e{stroke:#93c5fd;stroke-width:2.1;fill:none;marker-end:url(#arrow)}.d{stroke:#fb7185;stroke-width:2;stroke-dasharray:7 5;fill:none;marker-end:url(#arrow)}</style></defs>
+<rect width="1400" height="850" fill="#020617"/><path d="M0 0h1400v850H0z" fill="url(#grid)" opacity="0.2"/><text x="50" y="58" class="t">EDC flow — catálogo, negociación y transferencia</text><text x="50" y="88" class="s">El consumidor externo negocia vía DSP; DataSafe autoriza y entrega solo un export pack aprobado.</text>
+<path class="e" d="M290,240.0 C325.0,240.0 325.0,240.0 360,240.0"/>
+<text x="270.0" y="232.0" class="m">publish asset/policy</text>
+<path class="e" d="M660,240.0 C625.0,240.0 625.0,240.0 590,240.0"/>
+<text x="570.0" y="232.0" class="m">catalog + contract</text>
+<path class="e" d="M360,240.0 C325.0,240.0 325.0,240.0 290,240.0"/>
+<text x="270.0" y="232.0" class="m">approval/policy check</text>
+<path class="e" d="M890,240.0 C925.0,240.0 925.0,240.0 960,240.0"/>
+<text x="870.0" y="232.0" class="m">pull using EDR</text>
+<path class="e" d="M1190,240.0 C1075.0,240.0 1075.0,442.5 960,442.5"/>
+<text x="1020.0" y="333.25" class="m">read approved pack</text>
+<path class="e" d="M960,240.0 C625.0,240.0 625.0,442.5 290,442.5"/>
+<text x="570.0" y="333.25" class="m">events</text>
+<path class="e" d="M360,240.0 C325.0,240.0 325.0,442.5 290,442.5"/>
+<text x="270.0" y="333.25" class="m">state changes</text>
+<rect x="60" y="180" width="230" height="120" rx="18" fill="#10223a" stroke="#38bdf8" stroke-width="2"/>
+<text x="82" y="216" class="l">DataSafe Core</text>
+<text x="82" y="242" class="m">policy · approval</text>
+<text x="82" y="261" class="m">export contract</text>
+<text x="82" y="280" class="m">audit events</text>
+<rect x="360" y="180" width="230" height="120" rx="18" fill="#102a1e" stroke="#34d399" stroke-width="2"/>
+<text x="382" y="216" class="l">Provider Control Plane</text>
+<text x="382" y="242" class="m">catalog</text>
+<text x="382" y="261" class="m">contract negotiation</text>
+<text x="382" y="280" class="m">transfer process</text>
+<rect x="660" y="180" width="230" height="120" rx="18" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+<text x="682" y="216" class="l">Consumer Connector</text>
+<text x="682" y="242" class="m">catalog request</text>
+<text x="682" y="261" class="m">contract request</text>
+<text x="682" y="280" class="m">transfer request</text>
+<rect x="960" y="180" width="230" height="120" rx="18" fill="#102a1e" stroke="#34d399" stroke-width="2"/>
+<text x="982" y="216" class="l">Provider Data Plane</text>
+<text x="982" y="242" class="m">EDR/token</text>
+<text x="982" y="261" class="m">HTTPS pull</text>
+<text x="982" y="280" class="m">TTL + audit</text>
+<rect x="960" y="390" width="230" height="105" rx="18" fill="#241b3f" stroke="#a78bfa" stroke-width="2"/>
+<text x="982" y="426" class="l">Private Storage</text>
+<text x="982" y="452" class="m">approved ZIP</text>
+<text x="982" y="471" class="m">manifest/checksums</text>
+<rect x="60" y="390" width="230" height="105" rx="18" fill="#3a260d" stroke="#fbbf24" stroke-width="2"/>
+<text x="82" y="426" class="l">Audit Service</text>
+<text x="82" y="452" class="m">state trace</text>
+<text x="82" y="471" class="m">message trace</text>
+<text x="82" y="490" class="m">download evidence</text>
+</svg>

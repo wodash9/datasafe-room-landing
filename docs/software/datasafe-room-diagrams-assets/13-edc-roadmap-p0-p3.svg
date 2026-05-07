@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+<title id="title">Roadmap EDC para DataSafe Room</title><desc id="desc">EDC completo entra por fases; el MVP valida controlled export y readiness antes de federar.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker><style>.t{font:700 30px Inter,Arial,sans-serif;fill:#f8fafc}.s{font:400 15px Inter,Arial,sans-serif;fill:#cbd5e1}.l{font:700 16px Inter,Arial,sans-serif;fill:#f8fafc}.m{font:400 12px Inter,Arial,sans-serif;fill:#cbd5e1}.e{stroke:#93c5fd;stroke-width:2.1;fill:none;marker-end:url(#arrow)}.d{stroke:#fb7185;stroke-width:2;stroke-dasharray:7 5;fill:none;marker-end:url(#arrow)}</style></defs>
+<rect width="1400" height="850" fill="#020617"/><path d="M0 0h1400v850H0z" fill="url(#grid)" opacity="0.2"/><text x="50" y="58" class="t">Roadmap EDC para DataSafe Room</text><text x="50" y="88" class="s">EDC completo entra por fases; el MVP valida controlled export y readiness antes de federar.</text>
+<path class="e" d="M330,295.0 C362.5,295.0 362.5,295.0 395,295.0"/>
+<text x="307.5" y="287.0" class="m">learn</text>
+<path class="e" d="M655,295.0 C687.5,295.0 687.5,295.0 720,295.0"/>
+<text x="632.5" y="287.0" class="m">activate</text>
+<path class="e" d="M980,295.0 C1012.5,295.0 1012.5,295.0 1045,295.0"/>
+<text x="957.5" y="287.0" class="m">federate</text>
+<rect x="70" y="220" width="260" height="150" rx="18" fill="#3a260d" stroke="#fbbf24" stroke-width="2"/>
+<text x="92" y="256" class="l">P0 — Learning Lab</text>
+<text x="92" y="282" class="m">2 connectors sintéticos</text>
+<text x="92" y="301" class="m">Docker Compose</text>
+<text x="92" y="320" class="m">no datos reales</text>
+<rect x="395" y="220" width="260" height="150" rx="18" fill="#10223a" stroke="#38bdf8" stroke-width="2"/>
+<text x="417" y="256" class="l">P1 — DataSafe Core</text>
+<text x="417" y="282" class="m">shadow DCAT/ODRL/DSP</text>
+<text x="417" y="301" class="m">export pack dataspace/*.jsonld</text>
+<text x="417" y="320" class="m">no EDC productivo</text>
+<rect x="720" y="220" width="260" height="150" rx="18" fill="#102a1e" stroke="#34d399" stroke-width="2"/>
+<text x="742" y="256" class="l">P2 — EDC Pilot</text>
+<text x="742" y="282" class="m">Control Plane + Data Plane</text>
+<text x="742" y="301" class="m">provider-side only</text>
+<text x="742" y="320" class="m">allowlist/TLS</text>
+<rect x="1045" y="220" width="260" height="150" rx="18" fill="#3b1825" stroke="#fb7185" stroke-width="2"/>
+<text x="1067" y="256" class="l">P3 — Federation</text>
+<text x="1067" y="282" class="m">IdentityHub/DCP</text>
+<text x="1067" y="301" class="m">Issuer + Federated Catalog</text>
+<text x="1067" y="320" class="m">TCK/conformance</text>
+</svg>

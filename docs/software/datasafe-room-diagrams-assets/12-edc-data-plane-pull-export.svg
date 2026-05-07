@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+<title id="title">Data Plane Pull — Controlled Export First</title><desc id="desc">La transferencia no abre datos crudos; resuelve artefacto aprobado, token temporal y auditoría.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker><style>.t{font:700 30px Inter,Arial,sans-serif;fill:#f8fafc}.s{font:400 15px Inter,Arial,sans-serif;fill:#cbd5e1}.l{font:700 16px Inter,Arial,sans-serif;fill:#f8fafc}.m{font:400 12px Inter,Arial,sans-serif;fill:#cbd5e1}.e{stroke:#93c5fd;stroke-width:2.1;fill:none;marker-end:url(#arrow)}.d{stroke:#fb7185;stroke-width:2;stroke-dasharray:7 5;fill:none;marker-end:url(#arrow)}</style></defs>
+<rect width="1400" height="850" fill="#020617"/><path d="M0 0h1400v850H0z" fill="url(#grid)" opacity="0.2"/><text x="50" y="58" class="t">Data Plane Pull — Controlled Export First</text><text x="50" y="88" class="s">La transferencia no abre datos crudos; resuelve artefacto aprobado, token temporal y auditoría.</text>
+<path class="e" d="M310,217.5 C345.0,217.5 345.0,217.5 380,217.5"/>
+<path class="e" d="M610,217.5 C645.0,217.5 645.0,217.5 680,217.5"/>
+<path class="e" d="M910,217.5 C945.0,217.5 945.0,217.5 980,217.5"/>
+<text x="890.0" y="209.5" class="m">approved</text>
+<path class="e" d="M980,217.5 C795.0,217.5 795.0,427.5 610,427.5"/>
+<path class="e" d="M610,427.5 C645.0,427.5 645.0,427.5 680,427.5"/>
+<path class="e" d="M910,427.5 C945.0,427.5 945.0,427.5 980,427.5"/>
+<text x="890.0" y="419.5" class="m">download evidence</text>
+<path class="e" d="M1210,217.5 C1095.0,217.5 1095.0,427.5 980,427.5"/>
+<text x="1040.0" y="314.5" class="m">hash refs</text>
+<rect x="80" y="170" width="230" height="95" rx="18" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+<text x="102" y="206" class="l">Transfer request</text>
+<text x="102" y="232" class="m">consumer asks for</text>
+<text x="102" y="251" class="m">ContractAgreement</text>
+<rect x="380" y="170" width="230" height="95" rx="18" fill="#102a1e" stroke="#34d399" stroke-width="2"/>
+<text x="402" y="206" class="l">Control Plane</text>
+<text x="402" y="232" class="m">validates agreement</text>
+<text x="402" y="251" class="m">selects data plane</text>
+<rect x="680" y="170" width="230" height="95" rx="18" fill="#10223a" stroke="#38bdf8" stroke-width="2"/>
+<text x="702" y="206" class="l">DataSafe Policy</text>
+<text x="702" y="232" class="m">room · purpose · fields</text>
+<text x="702" y="251" class="m">expiry · revocation</text>
+<rect x="980" y="170" width="230" height="95" rx="18" fill="#10223a" stroke="#38bdf8" stroke-width="2"/>
+<text x="1002" y="206" class="l">Export Pack</text>
+<text x="1002" y="232" class="m">ZIP/PDF/CSV</text>
+<text x="1002" y="251" class="m">manifest + dataspace JSON-LD</text>
+<rect x="380" y="380" width="230" height="95" rx="18" fill="#3b1825" stroke="#fb7185" stroke-width="2"/>
+<text x="402" y="416" class="l">EDR/token</text>
+<text x="402" y="442" class="m">5–15 min TTL</text>
+<text x="402" y="461" class="m">scope per transfer</text>
+<rect x="680" y="380" width="230" height="95" rx="18" fill="#102a1e" stroke="#34d399" stroke-width="2"/>
+<text x="702" y="416" class="l">HTTPS proxy</text>
+<text x="702" y="442" class="m">no internal URL</text>
+<text x="702" y="461" class="m">rate limit</text>
+<rect x="980" y="380" width="230" height="95" rx="18" fill="#3a260d" stroke="#fbbf24" stroke-width="2"/>
+<text x="1002" y="416" class="l">Audit</text>
+<text x="1002" y="442" class="m">checksum · bytes</text>
+<text x="1002" y="461" class="m">participant · result</text>
+</svg>

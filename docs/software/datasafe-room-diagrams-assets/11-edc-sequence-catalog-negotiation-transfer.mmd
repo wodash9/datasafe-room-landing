@@ -1,0 +1,19 @@
+sequenceDiagram
+  participant DS as DataSafe Core
+  participant CP as Provider EDC Control Plane
+  participant DP as Provider EDC Data Plane
+  participant CC as Consumer EDC Connector
+  participant ST as Private Storage
+  DS->>CP: Publish Asset + PolicyDefinition + ContractDefinition
+  CC->>CP: DSP catalog request
+  CP-->>CC: DCAT catalog + ODRL offers
+  CC->>CP: Contract negotiation request
+  CP->>DS: Validate room, purpose, participant, approval need
+  DS-->>CP: Approved / needs approval / rejected
+  CP-->>CC: ContractAgreement if approved
+  CC->>CP: TransferProcess request
+  CP->>DP: Data Plane Signaling start
+  DP->>DS: Check ExportContract + policy + TTL
+  DP->>ST: Read approved export pack only
+  DP-->>CC: Endpoint Data Reference / HTTPS pull
+  DP->>DS: transfer.started/completed events

@@ -1,0 +1,15 @@
+flowchart TD
+  req[Consumer requests transfer] --> cp[EDC Control Plane]
+  cp --> valid{ContractAgreement valid?}
+  valid -- no --> deny[Reject + audit]
+  valid -- yes --> dp[Data Plane start]
+  dp --> policy{DataSafe policy check
+room + purpose + fields + expiry}
+  policy -- no --> deny
+  policy -- yes --> pack[Resolve approved export pack]
+  pack --> token[Issue short-lived EDR/token
+5-15 min TTL]
+  token --> gateway[HTTPS gateway/proxy]
+  gateway --> consumer[Consumer downloads]
+  pack --> audit[Audit checksum, bytes, participant, agreement]
+  gateway --> audit

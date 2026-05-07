@@ -18,6 +18,12 @@ Landing estática React/Vite para validar la propuesta comercial de DataSafe Roo
 - `docs/software/datasafe-room-technical-specification-2026-05-07.pdf`: versión PDF de la especificación técnica con gráficos embebidos.
 - `docs/software/datasafe-room-dsp-alignment-proposal-2026-05-07.md`: propuesta de alineación con IDSA Dataspace Protocol 2024-1/Eclipse DSP sin convertir el MVP en federación completa.
 - `docs/software/datasafe-room-dsp-alignment-proposal-2026-05-07.pdf`: versión PDF de la propuesta de alineación DSP.
+- `docs/software/datasafe-room-edc-implementation-plan-2026-05-07.md`: propuesta consolidada de implementación con Eclipse Dataspace Components / EDC, sus frameworks, fases P0-P3, arquitectura, seguridad, despliegue y criterios de aceptación.
+- `docs/software/datasafe-room-edc-implementation-plan-2026-05-07.pdf`: versión PDF de la propuesta EDC.
+- `docs/software/datasafe-room-edc-implementation-proposal-2026-05-07.md`: apéndice Daedalus/backend EDC.
+- `docs/software/datasafe-room-edc-deployment-operations-proposal-2026-05-07.md`: apéndice Hephaestus/DevOps EDC.
+- `docs/software/datasafe-room-edc-trust-security-analysis-2026-05-07.md`: apéndice Aegis/security-trust EDC.
+- `docs/software/datasafe-room-edc-technical-diagrams-ux-2026-05-07.md`: apéndice Mimir/diagramas y UX EDC.
 - `docs/software/datasafe-room-technical-diagrams-ux-flow-2026-05-07.md`: esquemas técnicos/UX de DataSafe Room con arquitectura, flujo PCF, dominio, estados, permisos, infra y roadmap.
 - `docs/software/datasafe-room-technical-diagrams-ux-flow-2026-05-07.pdf`: versión PDF con gráficos para revisión ejecutiva/técnica.
 - `docs/product-strategy-backlog.md`: estrategia, paquetes, UX y backlog vendible.
