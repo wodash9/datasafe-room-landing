@@ -1,0 +1,44 @@
+flowchart LR
+  requester[Requester / OEM
+cliente, auditor, comprador]
+  provider[Provider
+proveedor / fabricante]
+  operator[Room Operator
+Black Tower / admin]
+  web[Web App
+wizard PCF, workspace, preview por rol]
+  api[API Gateway
+auth, rate limit, tenant boundary]
+  room[Room Service
+salas, participantes, estados]
+  catalog[Catalog Service
+data products, campos, evidencias]
+  policy[Policy Engine
+RBAC + ABAC + reglas de salida]
+  workflow[Workflow Service
+output request, review, approval]
+  db[(Relational DB
+metadata, policies, grants)]
+  obj[(Object Storage
+assets, evidence, exports)]
+  audit[(Audit Ledger
+append-only log + hashes v1)]
+  idp[Identity Provider
+OIDC/SAML/MFA]
+  siem[Notification / SIEM
+alerts + monitoring]
+  requester --> web
+  provider --> web
+  operator --> web
+  web --> api
+  api --> room
+  api --> catalog
+  api --> policy
+  api --> workflow
+  room --> db
+  catalog --> obj
+  policy --> db
+  workflow --> audit
+  workflow --> obj
+  web -. auth .-> idp
+  audit --> siem

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-label="5. Máquina de estados">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/></filter>
+</defs>
+<style>text{font-family:Inter,Arial,sans-serif} .small{font-size:11px;fill:#6b7280}</style>
+<rect width="900" height="500" fill="white"/>
+<text x="450.0" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">5. Máquina de estados</text>
+<text x="450.0" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#6b7280">Estados de Room y OutputRequest con bloqueos de gobierno</text>
+<rect x="50" y="100" width="150" height="75" rx="12" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+<text x="125.0" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Draft</text>
+<text x="125.0" y="137" text-anchor="middle" font-size="11" fill="#6b7280">Configurar finalidad,</text>
+<text x="125.0" y="150" text-anchor="middle" font-size="11" fill="#6b7280">participantes,</text>
+<text x="125.0" y="163" text-anchor="middle" font-size="11" fill="#6b7280">plantilla</text>
+<rect x="260" y="100" width="150" height="75" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+<text x="335.0" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Active</text>
+<text x="335.0" y="150" text-anchor="middle" font-size="11" fill="#6b7280">Carga y revisión de</text>
+<text x="335.0" y="163" text-anchor="middle" font-size="11" fill="#6b7280">datos</text>
+<rect x="470" y="100" width="150" height="75" rx="12" fill="#f8fafc" stroke="#f97316" stroke-width="2"/>
+<text x="545.0" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Review</text>
+<text x="545.0" y="150" text-anchor="middle" font-size="11" fill="#6b7280">Output solicitado /</text>
+<text x="545.0" y="163" text-anchor="middle" font-size="11" fill="#6b7280">preview por rol</text>
+<rect x="680" y="100" width="150" height="75" rx="12" fill="#f8fafc" stroke="#0f766e" stroke-width="2"/>
+<text x="755.0" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Closing</text>
+<text x="755.0" y="150" text-anchor="middle" font-size="11" fill="#6b7280">Export final, cierre</text>
+<text x="755.0" y="163" text-anchor="middle" font-size="11" fill="#6b7280">operativo</text>
+<rect x="470" y="270" width="150" height="75" rx="12" fill="#f8fafc" stroke="#111827" stroke-width="2"/>
+<text x="545.0" y="292" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Archived</text>
+<text x="545.0" y="320" text-anchor="middle" font-size="11" fill="#6b7280">Retención, solo</text>
+<text x="545.0" y="333" text-anchor="middle" font-size="11" fill="#6b7280">lectura, audit pack</text>
+<line x1="200" y1="138" x2="260" y2="138" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="410" y1="138" x2="470" y2="138" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="620" y1="138" x2="680" y2="138" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 755 175 C 755 250, 620 305, 620 305" fill="none" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="545" y1="270" x2="545" y2="175" stroke="#6b7280" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<text x="230" y="128" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">invite + acuerdos</text>
+<text x="445" y="128" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">request output</text>
+<text x="650" y="128" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">aprobado/export</text>
+<text x="658" y="260" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">close + retention</text>
+<text x="575" y="220" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">rechazo/corrección</text>
+<rect x="70" y="300" width="130" height="55" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="135.0" y="322" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Requested</text>
+<text x="135.0" y="343" text-anchor="middle" font-size="10" fill="#6b7280">pendiente</text>
+<rect x="250" y="300" width="130" height="55" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="315.0" y="322" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Under Review</text>
+<text x="315.0" y="343" text-anchor="middle" font-size="10" fill="#6b7280">redline</text>
+<rect x="430" y="405" width="130" height="55" rx="12" fill="#ecfccb" stroke="#16a34a" stroke-width="2"/>
+<text x="495.0" y="427" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Approved</text>
+<text x="495.0" y="448" text-anchor="middle" font-size="10" fill="#6b7280">exportable</text>
+<rect x="610" y="405" width="130" height="55" rx="12" fill="#e0f2fe" stroke="#0891b2" stroke-width="2"/>
+<text x="675.0" y="427" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Exported</text>
+<text x="675.0" y="448" text-anchor="middle" font-size="10" fill="#6b7280">hash + pack</text>
+<rect x="430" y="300" width="130" height="55" rx="12" fill="#fce7f3" stroke="#dc2626" stroke-width="2"/>
+<text x="495.0" y="322" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Rejected</text>
+<text x="495.0" y="343" text-anchor="middle" font-size="10" fill="#6b7280">motivo</text>
+<line x1="200" y1="328" x2="250" y2="328" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="380" y1="328" x2="430" y2="328" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 315 355 C 330 410, 400 430, 430 430" fill="none" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="560" y1="433" x2="610" y2="433" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="400" y="285" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">Submáquina OutputRequest</text>
+</svg>

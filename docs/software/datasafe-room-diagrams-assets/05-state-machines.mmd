@@ -1,0 +1,18 @@
+stateDiagram-v2
+  [*] --> Draft
+  Draft --> Active: participantes + acuerdos
+  Active --> Review: output requested
+  Review --> Active: rechazo / corrección
+  Review --> Closing: aprobación + export
+  Closing --> Archived: cierre + retención
+  Archived --> [*]
+
+  state OutputRequest {
+    [*] --> Requested
+    Requested --> UnderReview
+    UnderReview --> Rejected
+    UnderReview --> Approved
+    Rejected --> UnderReview: corregir
+    Approved --> Exported
+    Exported --> [*]
+  }

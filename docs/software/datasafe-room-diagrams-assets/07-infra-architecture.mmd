@@ -1,0 +1,27 @@
+flowchart LR
+  subgraph Pub[Zona pública controlada]
+    waf[WAF/CDN/TLS]
+    web[Web App]
+  end
+  subgraph App[Zona privada aplicación]
+    api[API / Services]
+    pdp[Policy Decision Point]
+    workers[Workers: hash, PDF/ZIP, retention]
+  end
+  subgraph Data[Zona datos protegida]
+    pg[(Postgres/RLS)]
+    obj[(Object Storage encrypted)]
+    ledger[(Audit ledger append-only)]
+    kms[KMS / Secrets]
+  end
+  export[Fuentes MVP: CSV/XLSX/PDF aprobados
+sin OT directo] --> waf --> web --> api
+  api --> pdp
+  api --> pg
+  api --> obj
+  workers --> obj
+  workers --> ledger
+  kms --> pg
+  kms --> obj
+  idp[OIDC/SAML/MFA] -.-> web
+  siem[SIEM/alerts/backups] -.-> ledger

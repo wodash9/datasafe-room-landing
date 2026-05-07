@@ -14,6 +14,10 @@ Landing estática React/Vite para validar la propuesta comercial de DataSafe Roo
 
 - `docs/datasafe-room-dataspace-characteristics-2026-05-07.md`: PRD interno consolidado del dataspace DataSafe Room, con características, arquitectura, legal/security, MVP, backlog y QA gate.
 - `docs/datasafe-room-dataspace-characteristics-2026-05-07.pdf`: versión PDF del PRD consolidado.
+- `docs/software/datasafe-room-technical-specification-2026-05-07.md`: especificación técnica consolidada de componentes, backend, datos, APIs, workers, seguridad, infra, QA y diagramas.
+- `docs/software/datasafe-room-technical-specification-2026-05-07.pdf`: versión PDF de la especificación técnica con gráficos embebidos.
+- `docs/software/datasafe-room-technical-diagrams-ux-flow-2026-05-07.md`: esquemas técnicos/UX de DataSafe Room con arquitectura, flujo PCF, dominio, estados, permisos, infra y roadmap.
+- `docs/software/datasafe-room-technical-diagrams-ux-flow-2026-05-07.pdf`: versión PDF con gráficos para revisión ejecutiva/técnica.
 - `docs/product-strategy-backlog.md`: estrategia, paquetes, UX y backlog vendible.
 - `docs/security-ot-review.md`: revisión Aegis/Security-OT con amenazas, controles obligatorios, requisitos MVP/v1 y checklists para piloto seguro.
 

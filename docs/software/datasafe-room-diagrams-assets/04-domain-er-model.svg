@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1030" height="500" viewBox="0 0 1030 500" role="img" aria-label="4. Modelo de dominio / ER conceptual">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/></filter>
+</defs>
+<style>text{font-family:Inter,Arial,sans-serif} .small{font-size:11px;fill:#6b7280}</style>
+<rect width="1030" height="500" fill="white"/>
+<text x="515.0" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">4. Modelo de dominio / ER conceptual</text>
+<text x="515.0" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#6b7280">Objetos mínimos para MVP con extensibilidad dataspace</text>
+<rect x="40" y="90" width="150" height="90" rx="12" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+<text x="115.0" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Room</text>
+<text x="115.0" y="155" text-anchor="middle" font-size="11" fill="#6b7280">purpose, scope,</text>
+<text x="115.0" y="168" text-anchor="middle" font-size="11" fill="#6b7280">state, retention</text>
+<rect x="245" y="70" width="165" height="85" rx="12" fill="#f8fafc" stroke="#f97316" stroke-width="2"/>
+<text x="327.5" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">ParticipantOrg</text>
+<text x="327.5" y="143" text-anchor="middle" font-size="11" fill="#6b7280">role, domain, agreement</text>
+<rect x="460" y="70" width="135" height="85" rx="12" fill="#f8fafc" stroke="#f97316" stroke-width="2"/>
+<text x="527.5" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">User</text>
+<text x="527.5" y="143" text-anchor="middle" font-size="11" fill="#6b7280">role, status, mfa</text>
+<rect x="245" y="200" width="165" height="95" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+<text x="327.5" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">DataProduct</text>
+<text x="327.5" y="270" text-anchor="middle" font-size="11" fill="#6b7280">owner, version,</text>
+<text x="327.5" y="283" text-anchor="middle" font-size="11" fill="#6b7280">sensitivity</text>
+<rect x="460" y="200" width="160" height="95" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+<text x="540.0" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">FieldDefinition</text>
+<text x="540.0" y="270" text-anchor="middle" font-size="11" fill="#6b7280">unit, required,</text>
+<text x="540.0" y="283" text-anchor="middle" font-size="11" fill="#6b7280">exportable</text>
+<rect x="245" y="345" width="165" height="95" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+<text x="327.5" y="367" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Asset/Evidence</text>
+<text x="327.5" y="415" text-anchor="middle" font-size="11" fill="#6b7280">file, hash, version,</text>
+<text x="327.5" y="428" text-anchor="middle" font-size="11" fill="#6b7280">class</text>
+<rect x="665" y="115" width="145" height="95" rx="12" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+<text x="737.5" y="137" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Policy</text>
+<text x="737.5" y="172" text-anchor="middle" font-size="11" fill="#6b7280">permission,</text>
+<text x="737.5" y="185" text-anchor="middle" font-size="11" fill="#6b7280">prohibition,</text>
+<text x="737.5" y="198" text-anchor="middle" font-size="11" fill="#6b7280">obligation</text>
+<rect x="850" y="115" width="135" height="95" rx="12" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+<text x="917.5" y="137" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Agreement</text>
+<text x="917.5" y="185" text-anchor="middle" font-size="11" fill="#6b7280">terms, version,</text>
+<text x="917.5" y="198" text-anchor="middle" font-size="11" fill="#6b7280">accepted</text>
+<rect x="665" y="260" width="145" height="95" rx="12" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+<text x="737.5" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">DataGrant</text>
+<text x="737.5" y="330" text-anchor="middle" font-size="11" fill="#6b7280">who, what, why,</text>
+<text x="737.5" y="343" text-anchor="middle" font-size="11" fill="#6b7280">until</text>
+<rect x="460" y="360" width="160" height="95" rx="12" fill="#f8fafc" stroke="#f97316" stroke-width="2"/>
+<text x="540.0" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">OutputRequest</text>
+<text x="540.0" y="430" text-anchor="middle" font-size="11" fill="#6b7280">format, status,</text>
+<text x="540.0" y="443" text-anchor="middle" font-size="11" fill="#6b7280">requester</text>
+<rect x="665" y="410" width="145" height="85" rx="12" fill="#f8fafc" stroke="#f97316" stroke-width="2"/>
+<text x="737.5" y="432" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">OutputApproval</text>
+<text x="737.5" y="483" text-anchor="middle" font-size="11" fill="#6b7280">decision, approver</text>
+<rect x="850" y="335" width="135" height="95" rx="12" fill="#f8fafc" stroke="#f97316" stroke-width="2"/>
+<text x="917.5" y="357" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">AuditEvent</text>
+<text x="917.5" y="405" text-anchor="middle" font-size="11" fill="#6b7280">actor, action,</text>
+<text x="917.5" y="418" text-anchor="middle" font-size="11" fill="#6b7280">object, hash</text>
+<line x1="115.0" y1="135.0" x2="327.5" y2="112.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="221.25" y="119.75" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">1..n</text>
+<line x1="327.5" y1="112.5" x2="527.5" y2="112.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="427.5" y="108.5" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">1..n</text>
+<line x1="115.0" y1="135.0" x2="327.5" y2="247.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="221.25" y="187.25" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">1..n</text>
+<line x1="327.5" y1="247.5" x2="540.0" y2="247.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="433.75" y="243.5" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">1..n</text>
+<line x1="327.5" y1="247.5" x2="327.5" y2="392.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="327.5" y="316.0" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">1..n</text>
+<line x1="737.5" y1="162.5" x2="917.5" y2="162.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="827.5" y="158.5" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">versiona</text>
+<line x1="737.5" y1="162.5" x2="737.5" y2="307.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="737.5" y="231.0" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">emite</text>
+<line x1="115.0" y1="135.0" x2="737.5" y2="162.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="426.25" y="144.75" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">aplica</text>
+<line x1="527.5" y1="112.5" x2="737.5" y2="307.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="632.5" y="206.0" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">recibe</text>
+<line x1="737.5" y1="307.5" x2="327.5" y2="247.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="532.5" y="273.5" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">limita</text>
+<line x1="540.0" y1="407.5" x2="737.5" y2="452.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="638.75" y="426.0" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">0..n</text>
+<line x1="540.0" y1="407.5" x2="917.5" y2="382.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="728.75" y="391.0" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">genera</text>
+<line x1="737.5" y1="452.5" x2="917.5" y2="382.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="827.5" y="413.5" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">genera</text>
+<line x1="327.5" y1="392.5" x2="917.5" y2="382.5" stroke="#6b7280" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="622.5" y="383.5" text-anchor="middle" font-size="10" font-weight="600" fill="#6b7280">versiona</text>
+</svg>

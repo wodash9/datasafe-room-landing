@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="530" viewBox="0 0 920 530" role="img" aria-label="6. Matriz de permisos MVP">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/></filter>
+</defs>
+<style>text{font-family:Inter,Arial,sans-serif} .small{font-size:11px;fill:#6b7280}</style>
+<rect width="920" height="530" fill="white"/>
+<text x="460.0" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">6. Matriz de permisos MVP</text>
+<text x="460.0" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#6b7280">RBAC legible para negocio + ABAC para enforcement real</text>
+<text x="515" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Leyenda: A=autoriza/ejecuta · R=revisa/lee · C=consultado/configura · vacío=deny by default</text>
+<rect x="210" y="60" width="96" height="42" rx="6" fill="#e0f2fe" stroke="#2563eb" stroke-width="2"/>
+<text x="258.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Owner</text>
+<rect x="306" y="60" width="96" height="42" rx="6" fill="#e0f2fe" stroke="#2563eb" stroke-width="2"/>
+<text x="354.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Steward</text>
+<rect x="402" y="60" width="96" height="42" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+<text x="450.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Contributor</text>
+<rect x="498" y="60" width="96" height="42" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+<text x="546.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Requester</text>
+<rect x="594" y="60" width="96" height="42" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+<text x="642.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Approver</text>
+<rect x="690" y="60" width="96" height="42" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+<text x="738.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Auditor</text>
+<rect x="786" y="60" width="96" height="42" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+<text x="834.0" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Admin IT</text>
+<text x="20" y="133" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Crear/configurar Room</text>
+<rect x="210" y="110" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="258.0" y="133" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="306" y="110" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="402" y="110" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="498" y="110" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="110" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="690" y="110" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="786" y="110" width="96" height="36" fill="#fef3c7" stroke="#d1d5db"/>
+<text x="834.0" y="133" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">C</text>
+<text x="20" y="169" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Invitar/revocar</text>
+<rect x="210" y="146" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="258.0" y="169" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="306" y="146" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="402" y="146" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="498" y="146" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="146" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="690" y="146" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="786" y="146" width="96" height="36" fill="#fef3c7" stroke="#d1d5db"/>
+<text x="834.0" y="169" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">C</text>
+<text x="20" y="205" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Subir evidencia</text>
+<rect x="210" y="182" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="306" y="182" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="354.0" y="205" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="402" y="182" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="450.0" y="205" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="498" y="182" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="182" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="690" y="182" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="786" y="182" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<text x="20" y="241" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Clasificar sensibilidad</text>
+<rect x="210" y="218" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="306" y="218" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="354.0" y="241" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="402" y="218" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="450.0" y="241" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="498" y="218" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="218" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="690" y="218" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="786" y="218" width="96" height="36" fill="#fef3c7" stroke="#d1d5db"/>
+<text x="834.0" y="241" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">C</text>
+<text x="20" y="277" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Ver datos crudos</text>
+<rect x="210" y="254" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="306" y="254" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="354.0" y="277" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="402" y="254" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="450.0" y="277" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="498" y="254" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="254" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="690" y="254" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="738.0" y="277" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="786" y="254" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<text x="20" y="313" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Preview por rol</text>
+<rect x="210" y="290" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="258.0" y="313" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="306" y="290" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="354.0" y="313" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="402" y="290" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="450.0" y="313" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="498" y="290" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="546.0" y="313" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="594" y="290" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="642.0" y="313" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="690" y="290" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="738.0" y="313" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="786" y="290" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<text x="20" y="349" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Aprobar output</text>
+<rect x="210" y="326" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="306" y="326" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="402" y="326" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="498" y="326" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="326" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="642.0" y="349" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="690" y="326" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="786" y="326" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<text x="20" y="385" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Exportar audit pack</text>
+<rect x="210" y="362" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="258.0" y="385" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="306" y="362" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="402" y="362" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="498" y="362" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="546.0" y="385" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="594" y="362" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="642.0" y="385" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="690" y="362" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="738.0" y="385" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="786" y="362" width="96" height="36" fill="#fef3c7" stroke="#d1d5db"/>
+<text x="834.0" y="385" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">C</text>
+<text x="20" y="421" text-anchor="start" font-size="11" font-weight="600" fill="#111827">Cierre/retención</text>
+<rect x="210" y="398" width="96" height="36" fill="#dcfce7" stroke="#d1d5db"/>
+<text x="258.0" y="421" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">A</text>
+<rect x="306" y="398" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="402" y="398" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="498" y="398" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="594" y="398" width="96" height="36" fill="#f9fafb" stroke="#d1d5db"/>
+<rect x="690" y="398" width="96" height="36" fill="#dbeafe" stroke="#d1d5db"/>
+<text x="738.0" y="421" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">R</text>
+<rect x="786" y="398" width="96" height="36" fill="#fef3c7" stroke="#d1d5db"/>
+<text x="834.0" y="421" text-anchor="middle" font-size="14" font-weight="800" fill="#111827">C</text>
+<rect x="40" y="455" width="840" height="52" rx="12" fill="#f8fafc" stroke="#dc2626" stroke-width="2"/>
+<text x="460.0" y="477" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Regla ABAC adicional</text>
+<text x="460.0" y="482" text-anchor="middle" font-size="10" fill="#6b7280">Aun con rol permitido, el acceso depende de organización, sala, finalidad, sensibilidad, estado de aprobación, caducidad</text>
+<text x="460.0" y="495" text-anchor="middle" font-size="10" fill="#6b7280">y acuerdo aceptado.</text>
+</svg>

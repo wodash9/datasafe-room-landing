@@ -1,0 +1,23 @@
+flowchart LR
+  MVP[MVP piloto
+Controlled export first
+Wizard PCF
+RBAC + audit log
+Manual approval
+CSV/XLSX/PDF/ZIP]
+  V1[V1 enterprise
+SSO/MFA
+Watermark + hash chain
+Object lock/WORM
+API scoped tokens
+SFTP/bucket privado]
+  V2[V2 dataspace-ready
+Conectores ERP/MES aprobados
+ODRL/DCAT completo
+EDC/DSP opcional
+Catálogo federado opcional]
+  MVP --> V1 --> V2
+  Gate[[Avanzar solo si hay demanda repetida, contratos claros y threat model aprobado]]
+  Gate -. gobierna .-> MVP
+  Gate -. gobierna .-> V1
+  Gate -. gobierna .-> V2

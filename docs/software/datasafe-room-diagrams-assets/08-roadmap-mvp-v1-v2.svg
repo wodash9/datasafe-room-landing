@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="535" viewBox="0 0 1000 535" role="img" aria-label="8. Evolución MVP / V1 / V2">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/></filter>
+</defs>
+<style>text{font-family:Inter,Arial,sans-serif} .small{font-size:11px;fill:#6b7280}</style>
+<rect width="1000" height="535" fill="white"/>
+<text x="500.0" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">8. Evolución MVP / V1 / V2</text>
+<text x="500.0" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#6b7280">De sala controlada vendible a capacidades dataspace progresivas</text>
+<rect x="50" y="100" width="260" height="285" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+<text x="180.0" y="122" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">MVP piloto</text>
+<circle cx="75" cy="140" r="5" fill="#16a34a"/>
+<text x="92" y="145" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Controlled export first</text>
+<circle cx="75" cy="180" r="5" fill="#16a34a"/>
+<text x="92" y="185" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Wizard PCF</text>
+<circle cx="75" cy="220" r="5" fill="#16a34a"/>
+<text x="92" y="225" text-anchor="start" font-size="12" font-weight="600" fill="#111827">RBAC + audit log</text>
+<circle cx="75" cy="260" r="5" fill="#16a34a"/>
+<text x="92" y="265" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Manual approval</text>
+<circle cx="75" cy="300" r="5" fill="#16a34a"/>
+<text x="92" y="305" text-anchor="start" font-size="12" font-weight="600" fill="#111827">CSV/XLSX/PDF/ZIP</text>
+<rect x="365" y="100" width="260" height="285" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="495.0" y="122" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">V1 enterprise</text>
+<circle cx="390" cy="140" r="5" fill="#2563eb"/>
+<text x="407" y="145" text-anchor="start" font-size="12" font-weight="600" fill="#111827">SSO/MFA</text>
+<circle cx="390" cy="180" r="5" fill="#2563eb"/>
+<text x="407" y="185" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Watermark + hash chain</text>
+<circle cx="390" cy="220" r="5" fill="#2563eb"/>
+<text x="407" y="225" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Object lock/WORM</text>
+<circle cx="390" cy="260" r="5" fill="#2563eb"/>
+<text x="407" y="265" text-anchor="start" font-size="12" font-weight="600" fill="#111827">API scoped tokens</text>
+<circle cx="390" cy="300" r="5" fill="#2563eb"/>
+<text x="407" y="305" text-anchor="start" font-size="12" font-weight="600" fill="#111827">SFTP/bucket privado</text>
+<rect x="680" y="100" width="260" height="285" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="810.0" y="122" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">V2 dataspace-ready</text>
+<circle cx="705" cy="140" r="5" fill="#7c3aed"/>
+<text x="722" y="145" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Conectores ERP/MES aprobados</text>
+<circle cx="705" cy="180" r="5" fill="#7c3aed"/>
+<text x="722" y="185" text-anchor="start" font-size="12" font-weight="600" fill="#111827">ODRL/DCAT más completo</text>
+<circle cx="705" cy="220" r="5" fill="#7c3aed"/>
+<text x="722" y="225" text-anchor="start" font-size="12" font-weight="600" fill="#111827">EDC/DSP opcional</text>
+<circle cx="705" cy="260" r="5" fill="#7c3aed"/>
+<text x="722" y="265" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Machine-readable policies</text>
+<circle cx="705" cy="300" r="5" fill="#7c3aed"/>
+<text x="722" y="305" text-anchor="start" font-size="12" font-weight="600" fill="#111827">Catálogo federado opcional</text>
+<line x1="310" y1="240" x2="365" y2="240" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="625" y1="240" x2="680" y2="240" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="80" y="430" width="850" height="65" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="505.0" y="452" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Criterio de avance</text>
+<text x="505.0" y="470" text-anchor="middle" font-size="11" fill="#6b7280">No pasar de fase por moda tecnológica: avanzar cuando haya demanda repetida, contratos claros, threat model aprobado y</text>
+<text x="505.0" y="483" text-anchor="middle" font-size="11" fill="#6b7280">coste de operación justificado.</text>
+</svg>

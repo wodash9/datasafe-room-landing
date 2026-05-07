@@ -1,0 +1,19 @@
+sequenceDiagram
+  participant R as Requester
+  participant API as API Gateway
+  participant P as Policy Engine
+  participant S as Provider Steward
+  participant A as Approver
+  participant L as Audit/Storage
+  R->>API: Solicita output
+  API->>P: Evalúa rol, finalidad, sensibilidad
+  P-->>API: Permitido crear OutputRequest
+  API->>L: Evento + snapshot
+  API->>S: Notifica revisión
+  S-->>API: Marca campos/evidencias
+  API->>A: Envía a aprobación
+  A->>P: Check policy final
+  P-->>A: OK o bloqueo explicado
+  A-->>API: Aprueba o rechaza
+  API->>L: Genera export + hash + audit pack
+  API-->>R: Link revocable / descarga controlada

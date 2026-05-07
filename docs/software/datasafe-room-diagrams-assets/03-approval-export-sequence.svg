@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="585" viewBox="0 0 940 585" role="img" aria-label="3. Secuencia de aprobación y export">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/></filter>
+</defs>
+<style>text{font-family:Inter,Arial,sans-serif} .small{font-size:11px;fill:#6b7280}</style>
+<rect width="940" height="585" fill="white"/>
+<text x="470.0" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">3. Secuencia de aprobación y export</text>
+<text x="470.0" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#6b7280">Gating humano + policy engine + audit inmutable</text>
+<text x="70" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">Requester</text>
+<line x1="70" y1="92" x2="70" y2="555" stroke="#e5e7eb" stroke-width="1"/>
+<text x="210" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">API</text>
+<line x1="210" y1="92" x2="210" y2="555" stroke="#e5e7eb" stroke-width="1"/>
+<text x="360" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">Policy Engine</text>
+<line x1="360" y1="92" x2="360" y2="555" stroke="#e5e7eb" stroke-width="1"/>
+<text x="520" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">Provider Steward</text>
+<line x1="520" y1="92" x2="520" y2="555" stroke="#e5e7eb" stroke-width="1"/>
+<text x="690" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">Approver</text>
+<line x1="690" y1="92" x2="690" y2="555" stroke="#e5e7eb" stroke-width="1"/>
+<text x="850" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#111827">Audit/Storage</text>
+<line x1="850" y1="92" x2="850" y2="555" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="70" y1="120" x2="210" y2="120" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="140.0" y="113" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Solicita output</text>
+<line x1="210" y1="155" x2="360" y2="155" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="285.0" y="148" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Evalúa finalidad, rol, sensibilidad</text>
+<line x1="360" y1="190" x2="210" y2="190" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="285.0" y="183" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Permitido: crea OutputRequest</text>
+<line x1="210" y1="225" x2="850" y2="225" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="530.0" y="218" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Registra evento + snapshot</text>
+<line x1="210" y1="260" x2="520" y2="260" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="365.0" y="253" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Notifica revisión</text>
+<line x1="520" y1="295" x2="210" y2="295" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="365.0" y="288" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Marca campos / evidencias</text>
+<line x1="210" y1="330" x2="690" y2="330" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="450.0" y="323" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Envía a aprobación</text>
+<line x1="690" y1="365" x2="360" y2="365" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="525.0" y="358" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Check policy final</text>
+<line x1="360" y1="400" x2="690" y2="400" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="525.0" y="393" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">OK / bloqueo explicado</text>
+<line x1="690" y1="435" x2="210" y2="435" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="450.0" y="428" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Aprueba o rechaza</text>
+<line x1="210" y1="470" x2="850" y2="470" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="530.0" y="463" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Genera export + hash + audit pack</text>
+<line x1="210" y1="505" x2="70" y2="505" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="140.0" y="498" text-anchor="middle" font-size="11" font-weight="600" fill="#111827">Entrega link revocable / descarga controlada</text>
+<rect x="300" y="515" width="420" height="44" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="510.0" y="537" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Punto crítico</text>
+<text x="510.0" y="534" text-anchor="middle" font-size="10" fill="#6b7280">Aprobación humana cuando el output contiene datos sensibles,</text>
+<text x="510.0" y="547" text-anchor="middle" font-size="10" fill="#6b7280">evidencia adjunta o datos brutos.</text>
+</svg>

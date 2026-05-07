@@ -1,0 +1,24 @@
+flowchart TB
+  owner[Room Owner
+configura sala, invita, cierra]
+  steward[Data Steward
+clasifica, revisa, ve crudo autorizado]
+  contributor[Provider Contributor
+sube evidencia propia]
+  requester[Requester Viewer
+ve outputs aprobados]
+  approver[Approver
+aprueba/rechaza salida]
+  auditor[Auditor
+lee logs y evidencias autorizadas]
+  admin[Admin IT/Security
+SSO, dominios, revocación, retención]
+  abac[[ABAC: organización + sala + finalidad + sensibilidad + estado + caducidad + acuerdo]]
+  owner --> abac
+  steward --> abac
+  contributor --> abac
+  requester --> abac
+  approver --> abac
+  auditor --> abac
+  admin --> abac
+  abac --> deny[Deny by default si falta regla explícita]

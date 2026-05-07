@@ -1,0 +1,16 @@
+erDiagram
+  ROOM ||--o{ PARTICIPANT_ORG : includes
+  PARTICIPANT_ORG ||--o{ USER : has
+  ROOM ||--o{ DATA_PRODUCT : contains
+  DATA_PRODUCT ||--o{ FIELD_DEFINITION : defines
+  DATA_PRODUCT ||--o{ ASSET_EVIDENCE : supports
+  ROOM ||--o{ POLICY : applies
+  POLICY ||--o{ AGREEMENT : versioned_by
+  POLICY ||--o{ DATA_GRANT : emits
+  USER ||--o{ DATA_GRANT : receives
+  DATA_GRANT }o--|| DATA_PRODUCT : scopes
+  ROOM ||--o{ OUTPUT_REQUEST : receives
+  OUTPUT_REQUEST ||--o{ OUTPUT_APPROVAL : reviewed_by
+  OUTPUT_REQUEST ||--o{ AUDIT_EVENT : logs
+  ASSET_EVIDENCE ||--o{ AUDIT_EVENT : versions
+  OUTPUT_APPROVAL ||--o{ AUDIT_EVENT : logs

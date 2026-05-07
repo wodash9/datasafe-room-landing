@@ -1,0 +1,19 @@
+flowchart LR
+  A[Crear sala
+finalidad, alcance, retención] --> B[Invitar proveedor/cliente
+deny by default]
+  B --> C[Solicitar campos PCF
+unidad, periodo, factores, evidencias]
+  C --> D[Subir evidencia
+CSV/XLSX/PDF/ZIP]
+  D --> E[Clasificar sensibilidad
+owner, secreto, exportable]
+  E --> F[Preview por rol
+cliente/proveedor/auditor]
+  F --> G[Aprobar output
+approver + policy checks]
+  G --> H[Export + audit pack
+PDF/CSV/ZIP + hash/log]
+  P[[Políticas + acuerdos + data grants + audit log]] -. gobierna .-> A
+  P -. gobierna .-> D
+  P -. bloquea si falta aprobación .-> G
